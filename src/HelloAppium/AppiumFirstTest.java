@@ -65,7 +65,6 @@ public class AppiumFirstTest {
 		
 	    try {
 			
-			
 			 driver = new AndroidDriver (new URL("http://127.0.0.1:4723/"),options);
 			 WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.Button[@resource-id=\"us.current.android:id/otherSignUpOptionsButton\"]")));
@@ -90,11 +89,9 @@ public class AppiumFirstTest {
 			 if(list1.size()>=1) {
 				 driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_deny_button\"]")).click();
 			 }
-			 
 			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text=\"News\"]")));
 			 driver.findElement(By.xpath("//android.widget.TextView[@text=\"News\"]")).click();
 			 Thread.sleep(5000);
-			 
 			 List<WebElement> list10=driver.findElements(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/ivClose\"]"));
 			 if(!list10.isEmpty()) {
 				 driver.findElement(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/ivClose\"]")).click();
@@ -104,17 +101,12 @@ public class AppiumFirstTest {
 			
 		//	driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(10);")); 
 			 list1=driver.findElements(AppiumBy.ByAndroidUIAutomator.className("android.view.View"));
-
 			System.out.println(list1.size());
 			if(!list1.isEmpty()) {
 				 wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("android.view.View")));
 			}
-			
 			Thread.sleep(5000);
-			
 			List<WebElement>list4=driver.findElements(By.xpath("//*[@resource-id='us.current.android:id/header_button_2']"));
-			
-			
 			if(list4.size()>=1) {
 				System.out.println("Clicking on Nothanks");
 				driver.findElement(By.xpath("//*[@resource-id='us.current.android:id/header_button_2']")).click();
@@ -125,7 +117,6 @@ public class AppiumFirstTest {
 				
 				System.out.println("I am in round "+i);
 				List<WebElement> list7 =driver.findElements(By.xpath("//android.widget.TextView[@text=\"SPONSORED\"]"));
-				
 				if(!list7.isEmpty()) {
 					driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"SPONSORED\").instance(0));")).click();
 					try {
@@ -134,21 +125,16 @@ public class AppiumFirstTest {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					
 					list4=driver.findElements(By.xpath("//*[@resource-id='us.current.android:id/header_button_2']"));
-					
 					System.out.println("Header button "+list4.size());
-					
 					if(list4.size()>=1) {
 						driver.findElement(By.xpath("//*[@resource-id='us.current.android:id/header_button_2']")).click();
 					}
-					 
 					List<WebElement>list2=driver.findElements(AppiumBy.xpath("(//android.widget.TextView[@text=\"this article\"])"));
 					System.out.println("this article size "+ list2.size());
 					if(list2.size()>=1) {
 						 driver.findElement(AppiumBy.xpath("(//android.widget.TextView[@text=\"this article\"])")).click();
 					}
-					
 					 try {
 							Thread.sleep(15000);
 						} catch (InterruptedException e) {
@@ -159,7 +145,6 @@ public class AppiumFirstTest {
 					 List<WebElement>list3=driver.findElements(AppiumBy.className("android.widget.Button"));
 					 System.out.println("Close button instance "+list3.size());
 					 int ele=list3.size()-1;
-				
 						 if(list3.size()>=1) {
 								driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().className(\"android.widget.Button\").instance("+ele+"))")).click();
 							 	
@@ -175,14 +160,10 @@ public class AppiumFirstTest {
 						 
 					 }
 						 
-					Thread.sleep(5000);	 
-						 
+					Thread.sleep(5000);	  
 					List<WebElement> list8=driver.findElements(By.xpath("//android.widget.TextView[@text=\"You've reached your article limit. Try again later today!\"]"));	 
-					
 					if(!list8.isEmpty()) {
-						
 						List<WebElement>list9=driver.findElements(By.xpath("//android.widget.TextView[@text=\"News\"]"));
-						
 						if(!list9.isEmpty()) {
 							driver.findElement(By.xpath("//android.widget.Button")).click();
 							wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text=\"News\"]")));
@@ -192,7 +173,6 @@ public class AppiumFirstTest {
 							 if(!list10.isEmpty()) {
 								 driver.findElement(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/ivClose\"]")).click();
 							 }
-							
 						}
 						 break;
 					}
