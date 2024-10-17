@@ -91,5 +91,31 @@
 	<classpathentry kind="lib" path="seleniumfiles/selenium-safari-driver-4.25.0-sources.jar"/>
 	<classpathentry kind="lib" path="seleniumfiles/selenium-support-4.25.0.jar"/>
 	<classpathentry kind="lib" path="seleniumfiles/selenium-support-4.25.0-sources.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/batik-all-1.13.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/bcpkix-jdk15on-1.68.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/bcprov-jdk15on-1.68.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/pdfbox-2.0.22.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-examples-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-excelant-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-integration-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-ooxml-full-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-ooxml-lite-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/poi-scratchpad-5.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/SparseBitSet-1.2.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/xml-apis-ext-1.3.04.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/xmlbeans-4.0.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/xmlgraphics-commons-2.4.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/xmlsec-2.2.1.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/fontbox-2.0.22.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/graphics2d-0.30.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/commons-lang3-3.14.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/java-client-9.3.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
