@@ -1633,7 +1633,7 @@ public class TestRunnerForEarnApp {
 				 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]")).sendKeys(strPassword);
 			 }
 			
-			
+			 Thread.sleep(5000); 
 			 ThreadLocalDriver.getInstance().getDriver().hideKeyboard();
 			 Thread.sleep(10000); 
 			 WebElement element= ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"CONTINUE WITH EMAIL\")]"));
@@ -1646,16 +1646,25 @@ public class TestRunnerForEarnApp {
 			 if(list1.size()>=1) {
 				 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Don’t allow\")]")).click();
 			 }
-			 Thread.sleep(10000);
-			 List<WebElement>list12=ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//android.widget.ImageView[@content-desc=\"inapp_close_btn\"]"));
+			 Thread.sleep(15000);
 			 
+			List<WebElement>list13= ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/half_interstitial_image\"]"));
+			//android.widget.ImageView[@resource-id="us.current.android:id/half_interstitial_image"]
+			if(!list13.isEmpty()) {
+				
+				ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/half_interstitial_image\"]")).click();
+				System.out.println("******clicked on pop up window on home page**********************************");
+				//ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/half_interstitial_image\"]")).click();
+			}
+			 Thread.sleep(15000);
+			 List<WebElement>list12=ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//android.widget.ImageView[@content-desc=\"inapp_close_btn\"]"));
+			//android.widget.ImageView[@content-desc="inapp_close_btn"]
 			 if(!list12.isEmpty()) {
 				 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//android.widget.ImageView[@content-desc=\"inapp_close_btn\"]")).click();
 			 }
-			 
 			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.widget.TextView[@text=\"News\"]")));
 			 List<WebElement> list10;
-			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("(//*[contains(@text,\"Music\")])[1]")).click();
+			// ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("(//*[contains(@text,\"Music\")])[1]")).click();
 			 Thread.sleep(15000);
 			 list10=ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//android.widget.ImageView[@content-desc=\"inapp_close_btn\"]"));
 			 if(!list10.isEmpty()) {
@@ -1670,9 +1679,13 @@ public class TestRunnerForEarnApp {
 				 }
 				
 			 }
+			 /*
 			 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[contains(@text,\"Search artists\")]")));
+			 
+			 Thread.sleep(5000);
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Search artists\")]")).click();
 			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@text,\"Search Artist\")]")));
+			 Thread.sleep(5000);
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Search Artist\")]")).click();
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Search Artist\")]")).sendKeys(strSinger);
 			 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[contains(@text,\"Kumar Sanu\")])[2]")));
@@ -1688,10 +1701,11 @@ public class TestRunnerForEarnApp {
 			 
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Nostalgic Bollywood 90s by DesiZone Radio\")]")).click();
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//*[contains(@text,\"Home\")]")).click();
-			 
-			 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[contains(@text,\"News\")]")));
+			 */
 			 
 			 Thread.sleep(10000);
+			 wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[contains(@text,\"News\")]")));
+			// Thread.sleep(10000);
 			 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//android.widget.TextView[@text=\"News\"]")).click();
 			 Thread.sleep(5000);
 			 list10=ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//android.widget.ImageView[@content-desc=\"inapp_close_btn\"]"));
@@ -1758,17 +1772,20 @@ public class TestRunnerForEarnApp {
 					 System.out.println("Close button instance "+list3.size());
 					 int ele=list3.size()-1;
 						 if(list3.size()>=1) {
+							 System.out.println(" I am clicking on close button of articles");
 							 ThreadLocalDriver.getInstance().getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().className(\"android.widget.Button\").instance("+ele+"))")).click();
 							 	
 						 }else {
 							list4= ThreadLocalDriver.getInstance().getDriver().findElements(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.Button"));
 							if(!list4.isEmpty()) {
+								System.out.println("if only close button clicking");
 								ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.Button")).click();
-							}/*
+							}
 							list4= driver.findElements(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().className(\"android.widget.Button\").instance(0))"));
 							if(!list4.isEmpty()) {
+								System.out.println("I am clicking on close button to avoid to go into loop");
 								 driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().className(\"android.widget.Button\").instance(0))")).click();
-							}*/
+							}
 						 
 					 }
 						 
@@ -1786,6 +1803,7 @@ public class TestRunnerForEarnApp {
 								 ThreadLocalDriver.getInstance().getDriver().findElement(By.xpath("//android.widget.ImageView[@resource-id=\"us.current.android:id/ivClose\"]")).click();
 							 }
 						}
+						System.out.println("************************You've reached your article limit. Try again later today!***********");
 						 break;
 					}
 					
