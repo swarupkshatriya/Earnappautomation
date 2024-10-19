@@ -116,6 +116,10 @@
 	<classpathentry kind="lib" path="seleniumfiles/curvesapi-1.06.jar"/>
 	<classpathentry kind="lib" path="seleniumfiles/commons-lang3-3.14.0.jar"/>
 	<classpathentry kind="lib" path="seleniumfiles/java-client-9.3.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/jcommander-2.0.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/testng-7.10.2.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/slf4j-api-2.0.16.jar"/>
+	<classpathentry kind="lib" path="seleniumfiles/slf4j-simple-2.0.16.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
